@@ -90,7 +90,7 @@ export default function Home() {
 
       <section className="relative isolate overflow-hidden">
         <img
-          src="/hero.png"
+          src="/hero.jpg"
           alt="Timber fence installation"
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />

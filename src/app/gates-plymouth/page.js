@@ -202,6 +202,25 @@ export default function GatesPlymouthPage() {
           </div>
         </div>
       </section>
+      <section className="bg-slate-50 py-16">
+  <div className="mx-auto max-w-5xl px-6 text-center">
+    <h2 className="text-2xl font-bold md:text-3xl">
+      Related Services
+    </h2>
+
+    <div className="mt-6 flex flex-wrap justify-center gap-4">
+      <a href="/fencing-plymouth" className="font-semibold text-amber-700 hover:underline">
+        Fencing Plymouth
+      </a>
+      <a href="/decking-plymouth" className="font-semibold text-amber-700 hover:underline">
+        Decking Plymouth
+      </a>
+      <a href="/gates-plymouth" className="font-semibold text-amber-700 hover:underline">
+        Gates Plymouth
+      </a>
+    </div>
+  </div>
+</section>
 
       <section className="bg-amber-700 py-16 text-white">
         <div className="mx-auto max-w-5xl px-6 text-center">

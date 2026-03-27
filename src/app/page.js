@@ -189,29 +189,39 @@ const localBusinessSchema = {
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {services.map((service) => (
-            <article
-              key={service.title}
-              className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-            >
-              <div className="relative h-56 overflow-hidden">
-                <Image
-  src={`/service-${service.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}.jpg`}
-  alt={`${service.title} services in Plymouth by Timberline`}
-  fill
-  sizes="(max-width: 768px) 100vw, 33vw"
-  className="object-cover transition duration-500 group-hover:scale-105"
-/>
-                <div className="absolute inset-0 bg-black/20" />
-              </div>
+  {services.map((service) => {
+   const href =
+  service.title === "Fencing"
+    ? "/fencing-plymouth"
+    : service.title === "Decking"
+    ? "/decking-plymouth"
+    : service.title === "Gates"
+    ? "/gates-plymouth"
+    : "#";
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                <p className="mt-3 text-slate-600">{service.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+    return (
+      <a key={service.title} href={href}>
+        <article className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+          <div className="relative h-56 overflow-hidden">
+            <Image
+              src={`/service-${service.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}.jpg`}
+              alt={`${service.title} services in Plymouth by Timberline`}
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/20" />
+          </div>
+
+          <div className="p-6">
+            <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
+            <p className="mt-3 text-slate-600">{service.description}</p>
+          </div>
+        </article>
+      </a>
+    );
+  })}
+</div>
       </section>
       <section id="gallery" className="mx-auto max-w-7xl px-6 py-24">
   <div className="mx-auto mb-14 max-w-3xl text-center">

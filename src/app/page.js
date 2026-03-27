@@ -137,9 +137,7 @@ const localBusinessSchema = {
         <div className="mx-auto flex min-h-[82vh] max-w-7xl items-end justify-center px-6 pb-20 pt-32 text-center md:pb-24">
           <div className="max-w-4xl">
             <h1 className="text-4xl font-black leading-tight text-white md:text-6xl">
-              Fencing, Decking & Gate
-              <br />
-              Installation in Plymouth
+              Fencing, Decking & Gate Installation in Plymouth
             </h1>
 
             <p className="mt-5 text-lg leading-8 text-slate-200">

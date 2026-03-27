@@ -145,6 +145,12 @@ const localBusinessSchema = {
             <p className="mt-5 text-lg leading-8 text-slate-200">
               Quality timber and composite installations built to last.
             </p>
+            <p className="mt-4 text-lg text-white">
+  Call now for a free quote:{" "}
+  <a href="tel:07933988421" className="font-bold underline">
+    07933 988 421
+  </a>
+</p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <a
@@ -588,6 +594,14 @@ const localBusinessSchema = {
       <footer className="bg-slate-950 py-8 text-center text-sm text-slate-400">
         <p>© {new Date().getFullYear()} Timberline Fencing & Decking. All rights reserved.</p>
       </footer>
+      <a
+  href="tel:07933988421"
+  className="fixed bottom-24 right-6 z-50 flex items-center gap-3 rounded-full bg-amber-700 px-5 py-3 text-white shadow-lg transition hover:scale-105 hover:bg-amber-800"
+  aria-label="Call Timberline"
+>
+  <span className="text-xl leading-none">📞</span>
+  <span className="hidden text-sm font-semibold sm:inline">Call Now</span>
+</a>
       <a
   href="https://wa.me/447933988421?text=Hi%20Timberline%2C%20I%27d%20like%20a%20quote."
   target="_blank"

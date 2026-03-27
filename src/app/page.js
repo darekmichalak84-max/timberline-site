@@ -164,6 +164,20 @@ const localBusinessSchema = {
                 View Services
               </a>
             </div>
+            <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm font-semibold text-white/90">
+  <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
+    Free Quotes
+  </span>
+  <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
+    Local Plymouth Service
+  </span>
+  <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
+    Quality Workmanship
+  </span>
+  <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
+    Friendly & Reliable
+  </span>
+</div>
           </div>
         </div>
       </section>

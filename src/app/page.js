@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [submitted, setSubmitted] = useState(false);
@@ -44,10 +45,43 @@ export default function Home() {
     text: "These guys were outstanding. Reliable and prompt communication, did what they said they would, when they said the would. Worked extremely quickly, to good quality, and tidied up after themselves. Would highly recommend. I have commissioned them for a bit more work as I was so happy with them.",
   },
 ];
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  name: "Timberline",
+  url: "https://timberlinepl.co.uk",
+  telephone: "+447933988421",
+  email: "info@timberlinepl.co.uk",
+  image: "https://timberlinepl.co.uk/og-image.jpg",
+  description:
+    "Timberline provides fencing, decking, gates, and outdoor timber services in Plymouth, Saltash, Ivybridge, Tavistock, and surrounding areas.",
+  areaServed: [
+    "Plymouth",
+    "Saltash",
+    "Ivybridge",
+    "Tavistock",
+    "Surrounding areas",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Plymouth",
+    addressRegion: "Devon",
+    addressCountry: "GB",
+  },
+  sameAs: [
+    "https://wa.me/447933988421"
+  ],
+};
 
   return (
   
     <main className="min-h-screen bg-white text-slate-900">
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(localBusinessSchema),
+  }}
+/>
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div>
@@ -89,11 +123,14 @@ export default function Home() {
       </header>
 
       <section className="relative isolate overflow-hidden">
-        <img
-          src="/hero.jpg"
-          alt="Timber fence installation"
-          className="absolute inset-0 -z-20 h-full w-full object-cover"
-        />
+       <Image
+  src="/hero.jpg"
+  alt="Timber fencing and decking installation in Plymouth"
+  fill
+  priority
+  sizes="100vw"
+  className="absolute inset-0 -z-20 object-cover"
+/>
 
         <div className="absolute inset-0 -z-10 bg-black/5" />
 
@@ -158,11 +195,13 @@ export default function Home() {
               className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="relative h-56 overflow-hidden">
-                <img
-                  src={`/service-${service.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}.jpg`}
-                  alt={service.title}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
+                <Image
+  src={`/service-${service.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}.jpg`}
+  alt={`${service.title} services in Plymouth by Timberline`}
+  fill
+  sizes="(max-width: 768px) 100vw, 33vw"
+  className="object-cover transition duration-500 group-hover:scale-105"
+/>
                 <div className="absolute inset-0 bg-black/20" />
               </div>
 
@@ -189,40 +228,42 @@ export default function Home() {
   </div>
 
   <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-    {[
-      "/gallery-1.jpg",
-      "/gallery-2.jpg",
-      "/gallery-3.jpg",
-      "/gallery-4.jpg",
-      "/gallery-5.jpg",
-      "/gallery-6.jpg",
-      "/gallery-7.jpg",
-      "/gallery-8.jpg",
-      "/gallery-9.jpg",
-      "/gallery-10.jpg",
-      "/gallery-11.jpg",
-      "/gallery-12.jpg",
-      "/gallery-13.jpg",
-      "/gallery-14.jpg",
-      "/gallery-15.jpg",
-    ].map((image, index) => (
-      <a
-        key={image}
-        href={image}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-      >
-        <div className="relative aspect-[4/3] overflow-hidden">
-          <img
-            src={image}
-            alt={`Timberline project ${index + 1}`}
-            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-        </div>
-      </a>
-    ))}
-  </div>
+  {[
+    "/gallery-1.jpg",
+    "/gallery-2.jpg",
+    "/gallery-3.jpg",
+    "/gallery-4.jpg",
+    "/gallery-5.jpg",
+    "/gallery-6.jpg",
+    "/gallery-7.jpg",
+    "/gallery-8.jpg",
+    "/gallery-9.jpg",
+    "/gallery-10.jpg",
+    "/gallery-11.jpg",
+    "/gallery-12.jpg",
+    "/gallery-13.jpg",
+    "/gallery-14.jpg",
+    "/gallery-15.jpg",
+  ].map((image, index) => (
+    <a
+      key={image}
+      href={image}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+    >
+      <div className="relative aspect-[4/3] overflow-hidden">
+        <Image
+  src={image}
+  alt={`Timberline fencing or decking project ${index + 1} in Plymouth area`}
+  fill
+  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+  className="object-cover transition duration-500 group-hover:scale-105"
+/>
+      </div>
+    </a>
+  ))}
+</div>
 </section>
 
       <section id="about" className="bg-slate-50 py-20">
@@ -277,6 +318,34 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <section className="bg-slate-50 py-20">
+  <div className="mx-auto max-w-7xl px-6">
+    <div className="mx-auto mb-10 max-w-3xl text-center">
+      <p className="text-sm font-bold uppercase tracking-[0.3em] text-amber-700">
+        Our Location
+      </p>
+      <h2 className="mt-3 text-3xl font-black md:text-4xl">
+        Based in Plymouth
+      </h2>
+      <p className="mt-4 text-lg text-slate-600">
+        Timberline serves Plymouth, Saltash, Ivybridge, Tavistock, and surrounding areas.
+      </p>
+    </div>
+
+    <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
+      <iframe
+        src="https://www.google.com/maps?q=Plymouth&output=embed"
+        width="100%"
+        height="450"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Timberline service area map"
+      ></iframe>
+    </div>
+  </div>
+</section>
 
       <section id="testimonials" className="bg-white py-24">
   <div className="mx-auto max-w-7xl px-6">
@@ -312,6 +381,34 @@ export default function Home() {
       ))}
     </div>
 
+  </div>
+</section>
+<section className="bg-amber-700 py-16 text-white">
+  <div className="mx-auto max-w-5xl px-6 text-center">
+    <h2 className="text-3xl font-black md:text-4xl">
+      Ready to improve your garden?
+    </h2>
+    <p className="mx-auto mt-4 max-w-2xl text-lg text-amber-100">
+      Get in touch for fencing, decking, gates, and timber work in Plymouth and surrounding areas. Free, no-obligation quotes available.
+    </p>
+
+    <div className="mt-8 flex flex-wrap justify-center gap-4">
+      <a
+        href="#contact"
+        className="rounded-2xl bg-white px-6 py-3 font-semibold text-amber-700 transition hover:bg-amber-50"
+      >
+        Request a Free Quote
+      </a>
+
+      <a
+        href="https://wa.me/447933988421?text=Hi%20Timberline%2C%20I%27d%20like%20a%20quote."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-2xl border border-white/40 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
+      >
+        Message on WhatsApp
+      </a>
+    </div>
   </div>
 </section>
 
@@ -353,8 +450,16 @@ export default function Home() {
 
           <div className="rounded-3xl bg-white p-8 text-slate-900 shadow-2xl">
             <p className="mb-4 text-sm text-slate-600">
-  Usually responds within a few hours.
+  Send us a few details and we’ll usually get back to you within a few hours.
 </p>
+<a
+  href="https://wa.me/447933988421?text=Hi%20Timberline%2C%20I%27d%20like%20a%20quote."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mb-5 block rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-center font-semibold text-green-700 transition hover:bg-green-100"
+>
+  Prefer WhatsApp? Message us here for a quick quote
+</a>
             <form
               onSubmit={async (e) => {
                 e.preventDefault();

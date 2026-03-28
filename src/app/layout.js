@@ -20,7 +20,7 @@ export const metadata = {
     template: "%s | Timberline",
   },
   description:
-    "Timberline provides fencing, decking, gates, and outdoor timber services in Plymouth, Saltash, Ivybridge, Tavistock, and surrounding areas. Get a free quote today.",
+  "Fencing, decking and gate installation in Plymouth. Timberline provides quality garden fencing, composite decking and timber gates across Plymouth, Saltash, Ivybridge and surrounding areas. Free quotes available.",
   keywords: [
     "fencing Plymouth",
     "decking Plymouth",

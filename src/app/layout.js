@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: new URL("https://timberlinepl.co.uk"),
   title: {
-   default: "Timberline | Fencing, Decking & Gates in Plymouth",
+    default: "Timberline | Fencing, Decking & Gates in Plymouth",
     template: "%s | Timberline",
   },
   description:
-  "Fencing, decking and gate installation in Plymouth. Timberline provides quality garden fencing, composite decking and timber gates across Plymouth, Saltash, Ivybridge and surrounding areas. Free quotes available.",
+    "Fencing, decking and gate installation in Plymouth. Timberline provides quality garden fencing, composite decking and timber gates across Plymouth, Saltash, Ivybridge and surrounding areas. Free quotes available.",
   keywords: [
     "fencing Plymouth",
     "decking Plymouth",
@@ -57,24 +57,36 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en-GB"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <script
-  dangerouslySetInnerHTML={{
-    __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <html lang="en-GB">
+      <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+'https://www.googletagmanager.com/gtm.js?id=GTM-TFSGK7Q9'+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TFSGK7Q9');`,
-  }}
-/>
-      <body className="min-h-full flex flex-col">
-        {children}
-      </body>
+          }}
+        />
+      </head>
 
-      <GoogleAnalytics gaId="G-XDP3604HDN" />
+      <body className="min-h-full flex flex-col">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TFSGK7Q9"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+
+        {children}
+
+        {/* Google Analytics */}
+        <GoogleAnalytics gaId="G-XDP3604HDN" />
+      </body>
     </html>
   );
 }

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: new URL("https://timberlinepl.co.uk"),
   title: {
-    default: "Timberline | Fencing & Decking in Plymouth",
+   default: "Timberline | Fencing, Decking & Gates in Plymouth",
     template: "%s | Timberline",
   },
   description:
@@ -61,6 +61,15 @@ export default function RootLayout({ children }) {
       lang="en-GB"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <script
+  dangerouslySetInnerHTML={{
+    __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFSGK7Q9');`,
+  }}
+/>
       <body className="min-h-full flex flex-col">
         {children}
       </body>

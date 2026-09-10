@@ -57,16 +57,58 @@ const localBusinessSchema = {
   url: "https://timberlinepl.co.uk",
   telephone: "+447933988421",
   email: "info@timberlinepl.co.uk",
+    contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+447933988421",
+    email: "info@timberlinepl.co.uk",
+    contactType: "customer service",
+    areaServed: "GB",
+    availableLanguage: ["English", "Polish"],
+  },
   image: "https://timberlinepl.co.uk/og-image.jpg",
   description:
   "Timberline provides fencing, decking, gates, waste removal, and outdoor property services in Plymouth, Saltash, Ivybridge, Tavistock, and surrounding areas.",
-  areaServed: [
-    "Plymouth",
-    "Saltash",
-    "Ivybridge",
-    "Tavistock",
-    "Surrounding areas",
-  ],
+  makesOffer: [
+  {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Service",
+      name: "Fencing Installation",
+    },
+  },
+  {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Service",
+      name: "Decking Installation",
+    },
+  },
+  {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Service",
+      name: "Garden Gates",
+    },
+  },
+  {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Service",
+      name: "Waste Removal",
+    },
+  },
+],
+ areaServed: [
+  "Plymouth",
+  "Plympton",
+  "Plymstock",
+  "Saltash",
+  "Ivybridge",
+  "Tavistock",
+  "Torpoint",
+  "Yelverton",
+  "Wembury",
+],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Plymouth",
@@ -205,10 +247,10 @@ const localBusinessSchema = {
           <h2 className="mt-3 text-3xl font-black md:text-5xl">
             Quality outdoor work, built to last
           </h2>
-          <p className="mt-4 text-lg leading-8 text-slate-600">
-            We create strong, attractive fencing, decking, gates, and timber features
-            designed to suit your property and improve your outdoor space.
-          </p>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-lg leading-8 text-slate-600">
+  We provide fencing, decking, gates, waste removal, and outdoor property services
+  across Plymouth and surrounding areas, with quality workmanship and a reliable local service.
+</p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-4">
@@ -336,10 +378,10 @@ const localBusinessSchema = {
             Areas We Cover
           </p>
           <h2 className="mt-3 text-3xl font-black md:text-4xl">Serving Plymouth and nearby areas</h2>
-          <p className="mt-4 text-lg text-slate-600">
-            We provide fencing, decking, gates, and timber work across Plymouth and the surrounding
-            area.
-          </p>
+         <p className="mt-4 text-lg text-slate-600">
+  Timberline provides fencing, decking, gates, waste removal, and outdoor property services
+  across Plymouth, Plympton, Plymstock, Saltash, Ivybridge, Tavistock, and surrounding areas.
+</p>
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -362,9 +404,10 @@ const localBusinessSchema = {
       <h2 className="mt-3 text-3xl font-black md:text-4xl">
         Based in Plymouth
       </h2>
-      <p className="mt-4 text-lg text-slate-600">
-        We provide fencing, decking, and gate installation services across Plymouth, Saltash, Ivybridge, Tavistock, and surrounding areas.
-      </p>
+     <p className="mt-4 text-lg text-slate-600">
+  Based in Plymouth, Timberline provides fencing, decking, gates, waste removal,
+  and outdoor property services to customers across Plymouth and surrounding areas.
+</p>
     </div>
 
     <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
@@ -464,7 +507,7 @@ const localBusinessSchema = {
             <div className="mt-8 space-y-4 text-slate-200">
               <p>
                 <span className="font-semibold text-white">Phone:</span>{" "}
-                <a href="tel:07700111222" className="hover:text-amber-400">
+                <a href="tel:07933988421" className="hover:text-amber-400">
                   07933 988 421
                 </a>
               </p>

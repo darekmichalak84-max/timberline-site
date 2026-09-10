@@ -5,23 +5,28 @@ import Image from "next/image";
 export default function Home() {
   const [submitted, setSubmitted] = useState(false);
 
-  const services = [
-    {
-      title: "Fencing",
-      description:
-        "Strong, well-finished fencing for privacy, security, and a cleaner look around your garden or boundary.",
-    },
-    {
-      title: "Decking",
-      description:
-        "Timber and composite decking built for relaxing, entertaining, and making better use of your outdoor space.",
-    },
-    {
-      title: "Gates",
-      description:
-        "Made-to-measure gates and practical timber features finished to suit your property.",
-    },
-  ];
+ const services = [
+  {
+    title: "Fencing",
+    description:
+      "Strong, well-finished fencing for privacy, security, and a cleaner look around your garden or boundary.",
+  },
+  {
+    title: "Decking",
+    description:
+      "Timber and composite decking built for relaxing, entertaining, and making better use of your outdoor space.",
+  },
+  {
+    title: "Gates",
+    description:
+      "Made-to-measure gates and practical timber features finished to suit your property.",
+  },
+  {
+    title: "Waste Removal",
+    description:
+      "Reliable waste removal and clearance for homes, gardens, landlords, tradespeople and businesses across Plymouth and surrounding areas.",
+  },
+];
 
   const reasons = [
     "Local Plymouth service",
@@ -54,7 +59,7 @@ const localBusinessSchema = {
   email: "info@timberlinepl.co.uk",
   image: "https://timberlinepl.co.uk/og-image.jpg",
   description:
-    "Timberline provides fencing, decking, gates, and outdoor timber services in Plymouth, Saltash, Ivybridge, Tavistock, and surrounding areas.",
+  "Timberline provides fencing, decking, gates, waste removal, and outdoor property services in Plymouth, Saltash, Ivybridge, Tavistock, and surrounding areas.",
   areaServed: [
     "Plymouth",
     "Saltash",
@@ -206,7 +211,7 @@ const localBusinessSchema = {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-4">
   {services.map((service) => {
    const href =
   service.title === "Fencing"
@@ -215,6 +220,8 @@ const localBusinessSchema = {
     ? "/decking-plymouth"
     : service.title === "Gates"
     ? "/gates-plymouth"
+    : service.title === "Waste Removal"
+    ? "/waste-removal"
     : "#";
 
     return (
@@ -568,6 +575,7 @@ const localBusinessSchema = {
                   <option>Fencing</option>
                   <option>Decking</option>
                   <option>Gates</option>
+                  <option>Waste Removal</option>
                   <option>Other Timber Work</option>
                 </select>
               </div>

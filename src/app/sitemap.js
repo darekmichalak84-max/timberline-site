@@ -16,6 +16,10 @@ export default function sitemap() {
       url: "https://timberlinepl.co.uk/gates-plymouth",
       lastModified: new Date(),
     },
+      {
+      url: "https://timberlinepl.co.uk/landscaping-groundworks-plymouth",
+      lastModified: new Date(),
+    },
     {
       url: "https://timberlinepl.co.uk/waste-removal",
       lastModified: new Date(),

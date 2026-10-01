@@ -22,6 +22,11 @@ export default function Home() {
       "Made-to-measure gates and practical timber features finished to suit your property.",
   },
   {
+    title: "Landscaping & Groundworks",
+    description:
+      "Patios, paving, retaining walls and groundworks to transform and make better use of your outdoor space.",
+  },
+  {
     title: "Waste Removal",
     description:
       "Reliable waste removal and clearance for homes, gardens, landlords, tradespeople and businesses across Plymouth and surrounding areas.",
@@ -67,7 +72,7 @@ const localBusinessSchema = {
   },
   image: "https://timberlinepl.co.uk/og-image.jpg",
   description:
-  "Timberline provides fencing, decking, gates, waste removal, and outdoor property services in Plymouth, Saltash, Ivybridge, Tavistock, and surrounding areas.",
+  "Timberline provides fencing, decking, gates, landscaping, groundworks, patios, retaining walls and waste removal across Plymouth and surrounding areas.",
   makesOffer: [
   {
     "@type": "Offer",
@@ -90,6 +95,13 @@ const localBusinessSchema = {
       name: "Garden Gates",
     },
   },
+  {
+  "@type": "Offer",
+  itemOffered: {
+    "@type": "Service",
+    name: "Landscaping & Groundworks",
+  },
+},
   {
     "@type": "Offer",
     itemOffered: {
@@ -248,12 +260,13 @@ const localBusinessSchema = {
             Quality outdoor work, built to last
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-lg leading-8 text-slate-600">
-  We provide fencing, decking, gates, waste removal, and outdoor property services
-  across Plymouth and surrounding areas, with quality workmanship and a reliable local service.
+  We provide fencing, decking, gates, landscaping, groundworks, patios,
+  retaining walls and waste removal across Plymouth and surrounding areas,
+  with quality workmanship and a reliable local service.
 </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
   {services.map((service) => {
    const href =
   service.title === "Fencing"
@@ -262,6 +275,8 @@ const localBusinessSchema = {
     ? "/decking-plymouth"
     : service.title === "Gates"
     ? "/gates-plymouth"
+    : service.title === "Landscaping & Groundworks"
+? "/landscaping-groundworks-plymouth"
     : service.title === "Waste Removal"
     ? "/waste-removal"
     : "#";
@@ -500,8 +515,8 @@ const localBusinessSchema = {
               Get your free quote today
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-slate-300">
-              Planning a new fence, decking area, or gate? Send over a few details and
-              we’ll get back to you with a free, no-obligation quote.
+             Planning a new fence, decking area, patio, retaining wall or landscaping project?
+Send over a few details and we’ll get back to you with a free, no-obligation quote.
             </p>
 
             <div className="mt-8 space-y-4 text-slate-200">
@@ -616,10 +631,11 @@ const localBusinessSchema = {
                   className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-amber-600"
                 >
                   <option>Fencing</option>
-                  <option>Decking</option>
-                  <option>Gates</option>
-                  <option>Waste Removal</option>
-                  <option>Other Timber Work</option>
+<option>Decking</option>
+<option>Gates</option>
+<option>Landscaping & Groundworks</option>
+<option>Waste Removal</option>
+<option>Other</option>
                 </select>
               </div>
 

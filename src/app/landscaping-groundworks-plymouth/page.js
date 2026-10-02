@@ -1,19 +1,19 @@
 import Image from "next/image";
 
 export const metadata = {
-  title: "Landscaping & Groundworks Plymouth | Timberline",
+  title: "Garden Makeovers & Landscaping Plymouth | Timberline",
   description:
-    "Landscaping and groundworks in Plymouth. Patios, porcelain paving, retaining walls, raised planters, garden bases, drainage and ground preparation. Free quotes.",
+    "Complete garden makeovers, landscaping and groundworks in Plymouth. Patios, porcelain paving, retaining walls, fencing, decking, drainage and more. Free site visits.",
 };
 
 const landscapingSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Landscaping & Groundworks Plymouth",
-  serviceType: "Landscaping, Groundworks, Patios and Retaining Walls",
-  description:
-    "Landscaping and groundwork services including patios, porcelain paving, retaining walls, raised planters, garden bases, drainage and ground preparation across Plymouth and surrounding areas.",
-  provider: {
+  name: "Garden Makeovers & Landscaping Plymouth",
+serviceType:
+  "Garden Makeovers, Landscaping, Groundworks, Patios, Fencing and Decking",
+description:
+  "Complete garden makeovers and landscaping in Plymouth including patios, porcelain paving, retaining walls, raised planters, fencing, decking, groundworks, drainage and garden preparation.", provider: {
     "@type": "HomeAndConstructionBusiness",
     name: "Timberline",
     url: "https://timberlinepl.co.uk",

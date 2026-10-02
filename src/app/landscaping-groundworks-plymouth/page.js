@@ -61,22 +61,25 @@ export default function LandscapingGroundworksPlymouthPage() {
               Timberline Landscaping & Groundworks
             </p>
 
-            <h1 className="mt-3 text-4xl font-black leading-tight md:text-6xl">
-              Landscaping & Groundworks Plymouth
-            </h1>
+           <h1 className="mt-3 text-4xl font-black leading-tight md:text-6xl">
+  Complete Garden Makeovers in Plymouth
+</h1>
 
-            <p className="mt-5 text-lg leading-8 text-slate-200">
-              Patios, porcelain paving, retaining walls, raised planters and
-              professional ground preparation across Plymouth and surrounding
-              areas.
-            </p>
+<p className="mt-5 text-lg leading-8 text-slate-200">
+  Transform your entire outdoor space with Timberline. From patios and
+  porcelain paving to retaining walls, raised planters, fencing, decking,
+  groundworks and drainage — we can bring the whole project together from
+  preparation to the finished garden.
+</p>
+
+            
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="/#contact"
                 className="rounded-2xl bg-amber-700 px-6 py-3 font-semibold text-white transition hover:bg-amber-800"
               >
-                Get a Free Quote
+                Book a Free Site Visit
               </a>
 
               <a
@@ -131,7 +134,70 @@ export default function LandscapingGroundworksPlymouthPage() {
           </div>
         </div>
       </section>
+{/* COMPLETE GARDEN MAKEOVERS */}
+<section className="bg-slate-900 py-20 text-white">
+  <div className="mx-auto max-w-7xl px-6">
+    <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div>
+        <p className="text-sm font-bold uppercase tracking-[0.3em] text-amber-400">
+          Complete Garden Transformations
+        </p>
 
+        <h2 className="mt-3 text-3xl font-black md:text-4xl">
+          More Than Just a New Patio
+        </h2>
+
+        <p className="mt-5 text-lg leading-8 text-slate-300">
+          If your whole garden needs attention, Timberline can bring the
+          different parts of the project together. Rather than arranging
+          separate contractors for the patio, fencing, decking and groundworks,
+          we can plan and carry out the complete transformation.
+        </p>
+
+        <p className="mt-5 text-lg leading-8 text-slate-300">
+          We can work with you to develop a practical layout for the space,
+          taking into account how you want to use the garden, existing levels,
+          access, drainage and the materials and features you would like to
+          include.
+        </p>
+
+        <p className="mt-5 text-lg leading-8 text-slate-300">
+          Whether that means creating a porcelain patio, changing garden
+          levels, building retaining walls and raised planters, replacing
+          fencing or adding a new deck, the project can be planned as one
+          complete outdoor renovation.
+        </p>
+
+        <a
+          href="/#contact"
+          className="mt-8 inline-block rounded-2xl bg-amber-700 px-6 py-3 font-semibold text-white transition hover:bg-amber-800"
+        >
+          Discuss Your Garden Makeover
+        </a>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4">
+        {[
+          "Patios & Porcelain",
+          "Retaining Walls",
+          "Raised Planters",
+          "Fencing & Gates",
+          "Decking",
+          "Groundworks",
+          "Drainage",
+          "Waste Removal",
+        ].map((service) => (
+          <div
+            key={service}
+            className="flex min-h-24 items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-5 text-center font-semibold text-slate-100"
+          >
+            {service}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
       {/* SERVICES */}
       <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-7xl px-6">
@@ -140,14 +206,15 @@ export default function LandscapingGroundworksPlymouthPage() {
               Our Landscaping Services
             </p>
 
-            <h2 className="mt-3 text-3xl font-black md:text-4xl">
-              Landscaping & Groundwork Services in Plymouth
-            </h2>
+           <h2 className="mt-3 text-3xl font-black md:text-4xl">
+  Everything Your Garden Transformation Needs
+</h2>
 
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              From preparing the ground to installing the finished landscaping,
-              we can take care of a wide range of outdoor projects.
-            </p>
+<p className="mt-5 text-lg leading-8 text-slate-600">
+  Choose a single service or bring several together as part of a complete
+  garden makeover. From the groundwork underneath to the finished patio,
+  fencing or decking, Timberline can manage the project from start to finish.
+</p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -206,6 +273,23 @@ export default function LandscapingGroundworksPlymouthPage() {
                 improvements.
               </p>
             </div>
+            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <h3 className="text-xl font-bold">Fencing & Gates</h3>
+  <p className="mt-3 leading-7 text-slate-600">
+    New fencing and garden gates can be incorporated into the wider
+    landscaping project, giving the finished garden privacy, security and a
+    consistent appearance.
+  </p>
+</div>
+
+<div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <h3 className="text-xl font-bold">Timber & Composite Decking</h3>
+  <p className="mt-3 leading-7 text-slate-600">
+    Decking can be incorporated alongside patios, retaining walls and other
+    landscaping to create separate seating areas, deal with changing levels
+    or make better use of difficult parts of the garden.
+  </p>
+</div>
           </div>
         </div>
       </section>
@@ -296,44 +380,49 @@ export default function LandscapingGroundworksPlymouthPage() {
             </p>
 
             <h2 className="mt-3 text-3xl font-black md:text-4xl">
-              Planning Your Landscaping Project
+              From First Visit to Finished Garden
             </h2>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="rounded-3xl border border-slate-200 p-7">
-              <div className="text-3xl font-black text-amber-700">1</div>
-              <h3 className="mt-4 text-xl font-bold">
-                Tell Us About Your Project
-              </h3>
-              <p className="mt-3 leading-7 text-slate-600">
-                Send photos and approximate measurements or arrange a visit so
-                we can look at the garden, access and existing ground levels.
-              </p>
-            </div>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+  <div className="rounded-3xl border border-slate-200 p-7">
+    <div className="text-3xl font-black text-amber-700">1</div>
+    <h3 className="mt-4 text-xl font-bold">Free Site Visit</h3>
+    <p className="mt-3 leading-7 text-slate-600">
+      We visit your property to look at the garden, access, existing levels
+      and what you would like to achieve with the space.
+    </p>
+  </div>
 
-            <div className="rounded-3xl border border-slate-200 p-7">
-              <div className="text-3xl font-black text-amber-700">2</div>
-              <h3 className="mt-4 text-xl font-bold">Plan the Work</h3>
-              <p className="mt-3 leading-7 text-slate-600">
-                We discuss the proposed layout, materials, ground preparation,
-                drainage and any retaining walls, planters or other features
-                required.
-              </p>
-            </div>
+  <div className="rounded-3xl border border-slate-200 p-7">
+    <div className="text-3xl font-black text-amber-700">2</div>
+    <h3 className="mt-4 text-xl font-bold">Plan Your New Garden</h3>
+    <p className="mt-3 leading-7 text-slate-600">
+      We discuss the layout, materials and features that could work together,
+      from patios and decking to fencing, retaining walls, planters and
+      drainage.
+    </p>
+  </div>
 
-            <div className="rounded-3xl border border-slate-200 p-7">
-              <div className="text-3xl font-black text-amber-700">3</div>
-              <h3 className="mt-4 text-xl font-bold">
-                Groundworks & Installation
-              </h3>
-              <p className="mt-3 leading-7 text-slate-600">
-                The area is prepared and the landscaping installed with
-                attention to levels, structure, drainage and the final
-                appearance of the garden.
-              </p>
-            </div>
-          </div>
+  <div className="rounded-3xl border border-slate-200 p-7">
+    <div className="text-3xl font-black text-amber-700">3</div>
+    <h3 className="mt-4 text-xl font-bold">Detailed Quotation</h3>
+    <p className="mt-3 leading-7 text-slate-600">
+      Once the project is agreed, we provide a clear quotation covering the
+      planned work, materials and the different elements of your garden
+      transformation.
+    </p>
+  </div>
+
+  <div className="rounded-3xl border border-slate-200 p-7">
+    <div className="text-3xl font-black text-amber-700">4</div>
+    <h3 className="mt-4 text-xl font-bold">Build & Transform</h3>
+    <p className="mt-3 leading-7 text-slate-600">
+      We take care of the groundwork and installation, bringing the different
+      parts of the project together to create the finished outdoor space.
+    </p>
+  </div>
+</div>
         </div>
       </section>
 
@@ -387,11 +476,23 @@ export default function LandscapingGroundworksPlymouthPage() {
             </p>
 
             <h2 className="mt-3 text-3xl font-black md:text-4xl">
-              Landscaping & Groundworks Questions
+              Garden Makeover & Landscaping Questions
             </h2>
           </div>
 
           <div className="space-y-6">
+            <div className="rounded-3xl border border-slate-200 p-6">
+  <h3 className="text-xl font-bold text-slate-900">
+    Do you provide complete garden makeovers in Plymouth?
+  </h3>
+  <p className="mt-3 leading-7 text-slate-600">
+    Yes. Timberline can take care of complete garden transformations,
+    combining services such as patios and porcelain paving, retaining walls,
+    raised planters, fencing, gates, decking, groundworks, drainage and waste
+    removal into one project. We can visit your property, discuss how you want
+    to use the space and help plan a practical layout for the finished garden.
+  </p>
+</div>
             <div className="rounded-3xl border border-slate-200 p-6">
               <h3 className="text-xl font-bold text-slate-900">
                 Do you install patios in Plymouth?
@@ -508,20 +609,21 @@ export default function LandscapingGroundworksPlymouthPage() {
       <section className="bg-amber-700 py-16 text-white">
         <div className="mx-auto max-w-5xl px-6 text-center">
           <h2 className="text-3xl font-black md:text-4xl">
-            Planning a Landscaping Project in Plymouth?
-          </h2>
+  Ready to Transform Your Garden?
+</h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-lg text-amber-100">
-            Contact Timberline for a free, no-obligation quote for patios,
-            paving, retaining walls, planters and groundworks.
-          </p>
+  Whether you need a new patio or a complete garden makeover, we can visit
+  your property, discuss your ideas and put together a plan for transforming
+  the space.
+</p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
               href="/#contact"
               className="rounded-2xl bg-white px-6 py-3 font-semibold text-amber-700 transition hover:bg-amber-50"
             >
-              Request a Free Quote
+              Book a Free Site Visit
             </a>
 
             <a
